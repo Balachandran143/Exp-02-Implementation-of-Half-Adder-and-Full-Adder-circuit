@@ -40,15 +40,44 @@ Program:
 Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
 Developed by: 
 RegisterNumber:  
-*/
-Logic symbol & Truthtable
-RTL realization
+### HALF ADDER:
+```
+module add(a,b,sum,carry);
+input a,b;
+output sum,carry;
+xor(sum,a,b);
+and(carry,a,b);
+endmodule
+```
+### FULL ADDER:
+```
+module fulladd(a,b,c,sum,carry);
+input a,b,c;
+output sum,carry;
+assign sum = ((a^b)^c);
+assign carry = ((a&b)|(b&c)|(c&a));
+endmodule
+```
 
 ### Output:
-### RTL
-### TIMING DIAGRAM
+### HALF ADDER:
+### RTL realization:
+![Screenshot 2023-09-23 091757](https://github.com/Balachandran143/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/118886489/f7cc1006-e815-44bb-983d-8e88bcf749eb)
 
+### TIMING DIAGRAM:
+![Screenshot 2023-09-23 091952](https://github.com/Balachandran143/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/118886489/e00b6af9-88f2-4a39-b852-3f5660291c95)
 
-### TRUTH TABLE 
+### TRUTH TABLE:
+![Screenshot 2023-09-23 092058](https://github.com/Balachandran143/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/118886489/2e9cc0a7-44dd-4741-9bfa-47a67d53449d)
+
+### FULL ADDER:
+### RTL realization:
+![Screenshot 2023-09-23 092205](https://github.com/Balachandran143/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/118886489/e80a7217-fe74-4c16-a751-4fee1af677cf)
+### TIMING DIAGRAM:
+![Screenshot 2023-09-23 092331](https://github.com/Balachandran143/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/118886489/b5f260b6-8fe8-41a4-8640-2769a0b63ea2)
+### TRUTH TABLE:
+![Screenshot 2023-09-23 092357](https://github.com/Balachandran143/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/118886489/47866cf3-7a26-4ec0-ac90-71fba9a2c357)
 
 ### Result:
+Thus, a half adder and full adder circuit is designed to verify its truth table in Quartus using
+Verilog programming.
